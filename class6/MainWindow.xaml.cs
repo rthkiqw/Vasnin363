@@ -39,9 +39,10 @@ namespace class6
                 cmbx.Items.Add(mess);
 
             textBox.Text = "";
+            textBox.Focus();
 
         }
-        
+
         private void Button_Click_Remove(object sender, RoutedEventArgs e)
         {
             mess = textBox.Text.Trim();
@@ -59,6 +60,68 @@ namespace class6
         private void Button_Click_Clear(object sender, RoutedEventArgs e)
         {
             cmbx.Items.Clear();
+        }
+        private void ButtonListBoxCopy(object sender, RoutedEventArgs e)
+        {
+            if (listBox.Items.Contains(cmbx.SelectedItem.ToString()) == false)
+                listBox.Items.Add(cmbx.SelectedItem.ToString());
+            else
+            {
+                MessageBox.Show("already exist");
+            }
+        }
+        private void RemoveListBoxButton(object sender, RoutedEventArgs e)
+        {
+            if (listBox.SelectedIndex != -1)
+            {
+                listBox.Items.Remove(listBox.SelectedItem.ToString());
+            }
+            else
+            {
+                MessageBox.Show("ERROR\nSELECT LISTBOX ITEM");
+            }
+        }
+        private void ClearListBoxButton(object sender, RoutedEventArgs e)
+        {
+            listBox.Items.Clear();
+        }
+        private void ButtonListBoxMove(object sender, RoutedEventArgs e)
+        {
+            if (cmbx.SelectedItem != null)
+            {
+                if (listBox.Items.Contains(cmbx.SelectedItem.ToString()) == false)
+                {
+                    listBox.Items.Add(cmbx.SelectedItem.ToString());
+                    cmbx.Items.Remove(cmbx.SelectedItem);
+                }
+                else
+                {
+                    MessageBox.Show("already exist");
+                }
+            }
+            else
+            {
+                MessageBox.Show("ERROR\nSELECT COMBOBOX ITEM");
+            }
+        }
+        private void ButtonListBoxGetBack(object sender, RoutedEventArgs e)
+        {
+            if (listBox.SelectedItem != null)
+            {
+                if (cmbx.Items.Contains(listBox.SelectedItem) == false)
+                {
+                    cmbx.Items.Add(listBox.SelectedItem.ToString());
+                    listBox.Items.Remove(listBox.SelectedItem.ToString());
+                }
+                else
+                {
+                    listBox.Items.Remove(listBox.SelectedItem);
+                }
+            }
+            else
+            {
+                MessageBox.Show("ERROR\nSELECT LISTBOX ITEM");
+            }
         }
     }
 }
