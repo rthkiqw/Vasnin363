@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "class4", "class4\class4.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class5", "WpfApp1\Class5.csproj", "{F10CD2D3-481C-48A9-A1D2-BFA906AB10D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "class6", "class6\class6.csproj", "{3D1CEAFF-3087-40EB-A6E8-A136A5D40A7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F10CD2D3-481C-48A9-A1D2-BFA906AB10D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F10CD2D3-481C-48A9-A1D2-BFA906AB10D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F10CD2D3-481C-48A9-A1D2-BFA906AB10D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1CEAFF-3087-40EB-A6E8-A136A5D40A7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1CEAFF-3087-40EB-A6E8-A136A5D40A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1CEAFF-3087-40EB-A6E8-A136A5D40A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1CEAFF-3087-40EB-A6E8-A136A5D40A7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
