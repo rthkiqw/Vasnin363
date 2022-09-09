@@ -26,7 +26,7 @@ namespace class6
         }
         string mess;
 
-        private void Button_Click_Add(object sender, RoutedEventArgs e)
+        private void Add()
         {
             mess = textBox.Text.Trim();
             if (cmbx.Items.Contains(mess))
@@ -40,7 +40,10 @@ namespace class6
 
             textBox.Text = "";
             textBox.Focus();
-
+        }
+        private void Button_Click_Add(object sender, RoutedEventArgs e)
+        {
+            Add();
         }
 
         private void Button_Click_Remove(object sender, RoutedEventArgs e)
@@ -122,6 +125,12 @@ namespace class6
             {
                 MessageBox.Show("ERROR\nSELECT LISTBOX ITEM");
             }
+        }
+
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            Add();
         }
     }
 }

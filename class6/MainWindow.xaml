@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0">
             <Label FontSize="20">Print something:</Label>
-            <TextBox Margin="1" BorderThickness="2" TextWrapping="Wrap" Name="textBox" Height="30"></TextBox>
+            <TextBox KeyDown="textBox_KeyDown" Margin="1" BorderThickness="2" TextWrapping="Wrap" Name="textBox" Height="30"></TextBox>
             <ComboBox Margin="5" Name="cmbx">
             </ComboBox>
             <Button Margin="1" Click="Button_Click_Add" Content="Add" HorizontalAlignment="Left"  Height="30" Width="225"/>
