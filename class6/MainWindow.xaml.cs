@@ -41,10 +41,6 @@ namespace class6
             textBox.Text = "";
             textBox.Focus();
         }
-        private void Button_Click_Add(object sender, RoutedEventArgs e)
-        {
-            Add();
-        }
 
         private void Button_Click_Remove(object sender, RoutedEventArgs e)
         {
@@ -66,11 +62,14 @@ namespace class6
         }
         private void ButtonListBoxCopy(object sender, RoutedEventArgs e)
         {
-            if (listBox.Items.Contains(cmbx.SelectedItem.ToString()) == false)
-                listBox.Items.Add(cmbx.SelectedItem.ToString());
-            else
+            if (cmbx.SelectedItem != null)
             {
-                MessageBox.Show("already exist");
+                if (listBox.Items.Contains(cmbx.SelectedItem.ToString()) == false)
+                    listBox.Items.Add(cmbx.SelectedItem.ToString());
+                else
+                {
+                    MessageBox.Show("already exist");
+                }
             }
         }
         private void RemoveListBoxButton(object sender, RoutedEventArgs e)
