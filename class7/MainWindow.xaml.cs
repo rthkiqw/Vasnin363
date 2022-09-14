@@ -20,7 +20,7 @@ namespace class7
     /// </summary>
     public partial class MainWindow : Window
     {
-        public  List<NamesWithPrice> names { get; set; } = new List<NamesWithPrice>();
+        public List<NamesWithPrice> names { get; set; } = new List<NamesWithPrice>();
         public NamesWithPrice selectedNameWithPrice { get; set; }
         public int sum { get; set; }
         public MainWindow()
@@ -39,11 +39,14 @@ namespace class7
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (listBox.SelectedItem == null) return;
-            listik.Items.Add(listBox.SelectedItem);
-            sum += selectedNameWithPrice.Price;
-            lableSum.GetBindingExpression(Label.ContentProperty).UpdateTarget();
-
+            if (selectedNameWithPrice == null) return;
+            if (!listik.Items.Contains(selectedNameWithPrice))
+            {
+                listik.Items.Add(selectedNameWithPrice);
+                sum += selectedNameWithPrice.Price;
+                lableSum.GetBindingExpression(Label.ContentProperty).UpdateTarget();
+            }
+            selectedNameWithPrice.Count++;
             (sender as ListBox).SelectedIndex = -1;
         }
     }

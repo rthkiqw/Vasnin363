@@ -37,14 +37,16 @@
             <ListBox Name="listik" Grid.Row="0">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock>
+                        <TextBlock FontSize="30">
                             <Run Text="{Binding Name}"/>
+                            <Run Foreground="Red" Text="x"/>
+                            <Run Foreground="Red" Text="{Binding Count}"/>
                         </TextBlock>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
             <Label Content="{Binding sum}" Name="lableSum" VerticalAlignment="Center" FontSize="45" Grid.Row="1">
-                
+
             </Label>
         </Grid>
     </Grid>
