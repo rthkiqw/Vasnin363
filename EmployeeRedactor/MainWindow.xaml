@@ -60,9 +60,13 @@
                 <Label>Print Middle Name:</Label>
                 <TextBox Name="tbMiddleName"></TextBox>
                 <Label>Print Position:</Label>
-                <ComboBox Name="tbPosition"></ComboBox>
+                <ComboBox Name="tbPosition" ItemsSource="{Binding Positions}"></ComboBox>
+                <Label>New position</Label>
+                <TextBox Name="CreateNewPos"></TextBox>
             </StackPanel>
             <Button Margin="10" Content="Sign Up" Grid.Row="1" Click="Button_Click"/>
+            <Button HorizontalAlignment="Left" Margin="10" Content="New position" Grid.Row="1" Click="Button_Click_1"/>
+            
         </Grid>
     </Grid>
 </Window>
