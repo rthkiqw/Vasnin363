@@ -151,6 +151,9 @@ namespace EmployeeRedactor
                     tbMiddleName.Text.Length == 0 &&
                     tbPosition.Text.Length == 0) return;
 
+                Employees.Add(new Employee(tbName.Text, tbSurname.Text, tbMiddleName.Text, tbPosition.Text));
+                empList.ItemsSource = Employees;
+
                 NpgsqlCommand command = new NpgsqlCommand();
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO employee(name,surname,patrnymic,position) VALUES (@name,@surname,@middlename,@position)";
